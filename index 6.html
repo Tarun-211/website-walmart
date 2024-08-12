@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Clone</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">Tarun  zon</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#deals">Deals</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#cart">Cart</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for products...">
+            <button>Search</button>
+        </div>
+    </header>
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h2>Welcome to Tarunzon</h2>
+                <p>Find the best products at unbeatable prices.</p>
+                <a href="#products" class="btn">Shop Now</a>
+            </div>
+        </section>
+        <section id="products">
+            <h2>Products</h2>
+            <div class="product-grid">
+                <div class="product" id="kitkat">
+                    <img src="e:\fete 1\kitkat.jpg" alt="kitkat">
+                    <h3>Product 1</h3>
+                    <p>$10.00</p>
+                    <button onclick="addToCart('Product 1', 10)">Add to Cart</button>
+                </div>
+                <div class="product" id="sev">
+                    <img src="e:\fete 1\sev.jpg" alt="sev">
+                    <h3>Product 2</h3>
+                    <p>$20.00</p>
+                    <button onclick="addToCart('Product 2', 20)">Add to Cart</button>
+                </div>
+                <div class="product" id="lays">
+                    <img src="e:\fete 1\Wlaya.jpg" alt="lays">
+                    <h3>Product 3</h3>
+                    <p>$30.00</p>
+                    <button onclick="addToCart('Product 3', 30)">Add to Cart</button>
+                </div>
+                <div class="product" id="Rasana">
+                    <img src="e:\fete 1\Wrasana.jpg" alt="rasana">
+                    <h3>Product 4</h3>
+                    <p>$40.00</p>
+                    <button onclick="addToCart('Product 4', 40)">Add to Cart</button>
+                </div>
+                <div class="product" id="5 star">
+                    <img src="e:\fete 1\5star.jpg" alt="5 star">
+                    <h3>Product 5</h3>
+                    <p>$50.00</p>
+                    <button onclick="addToCart('5star', 50)">Add to Cart</button>
+                </div>
+                <!-- Add more products up to 15 as needed -->
+            </div>
+        </section>
+        <section id="deals">
+            <h2>Today's Deals</h2>
+            <div class="deal-grid">
+                <div class="deal">
+                    <img src="e:\fete 1\kitkat.jpg" alt="Deal 1">
+                    <h3>Deal 1</h3>
+                    <p>Discounted Price: $5.00</p>
+                    <button onclick="addToCart('Deal 1', 5)">Add to Cart</button>
+                </div>
+                <div class="deal">
+                    <img src="e:\fete 1\Wlaya.jpg" alt="Deal 2">
+                    <h3>Deal 2</h3>
+                    <p>Discounted Price: $15.00</p>
+                    <button onclick="addToCart('Deal 2', 15)">Add to Cart</button>
+                </div>
+                <!-- Add more deals as needed -->
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+        <section id="cart">
+            <h2>Your Cart</h2>
+            <ul id="cart-items">
+                <!-- Cart items will be displayed here -->
+            </ul>
+            <p>Total: $<span id="total">0.00</span></p>
+            <button onclick="goToPayment()">Proceed to Payment</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; tarun es 2024.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
